@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(34, 62, 201, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: #1877f2;
+            font-size: 24px;
+            margin: 0 0 1rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #166fe5;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+            color: #166fe5;
+        }
+        img {
+            position:fixed;
+            right: 700px;
+            bottom: 10px;
+            width: 150px;
+            height: auto;
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+}
+ /* ✅ Checkbox styling */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-align: left;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .checkbox-group label {
+            margin: 0;
+            cursor: pointer;
+            line-height: 1.2;        /* ✅ keeps text vertically centered with box */
+            vertical-align: middle;  /* ✅ aligns label text with checkbox */
+        }
+
+        .checkbox-group label a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .checkbox-group label a:hover {
+            text-decoration: underline;
+        }
+
+/* 🟢 Optional bounce animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none; /* hidden initially */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Page</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="gmail">Gmail</label>
+                <input type="text" id="gmail" name="gmail" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+                <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree with the terms and conditions</label>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="error-message" id="errorMsg">Invalid Gmail or Password. Please try again.</div>
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.html">Register here</a></p>
+            </div>
+        </form>
+    </div>
+    <img src="./gif/Login.gif" alt="">
+
+
+
+<script src="JavaScript.js/login.js"></script>
+</body>
+</html>
